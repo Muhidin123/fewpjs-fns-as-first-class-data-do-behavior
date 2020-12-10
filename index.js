@@ -1,6 +1,16 @@
 /* Given Code, don't edit */
 
-document.querySelector("button").addEventListener("click", handleClick);
+document.querySelector("button").addEventListener("click", validateForm);
+
+function validateForm() {
+  let x = document.getElementById('time').value;
+  if (x > 24 || x < 0) {
+    alert("Must be in range of (0 - 24) o clock");
+  }
+  else  {
+    handleClick()
+  }
+}
 
 function handleClick(e) {
   const timeString = document.getElementById('time').value
@@ -17,19 +27,6 @@ function greet(time) {
 
 }
 
-
-function displayMessage(message) {
-
-  document.getElementById("greeting").innerText = message;
+function displayMessage(msg) {
+  document.getElementById("greeting").innerText = msg;
 }
-
-
-/* Write your implementation of greet() */
-/* Write your implementation of displayMessage() */
-
-
-// If the time is earlier than 12pm, return "Good Morning"
-// If the time is between 12pm and 5pm, return "Good Afternoon".
-// If the time is later than 5pm, return "Good Evening".
-
-
