@@ -9,11 +9,11 @@ function handleClick(e) {
 
 /* End Given Code, don't edit above here...*/
 function greet(time) {
-  var hour = time.split(':')[0]
-  hour = parseInt(hour)
-  if ( hour < 12) return "Good Morning"
-  if ( hour > 17) return "Good Evening"
-  return "Good Afternoon"
+  var hour = time.split(':')[0];
+  hour = parseInt(hour);
+  if ( hour < 12) return "Good Morning";
+  if ( hour > 17) return "Good Evening";
+  return "Good Afternoon";
 
 }
 
